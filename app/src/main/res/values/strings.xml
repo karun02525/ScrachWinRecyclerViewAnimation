@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Scratch and Win</string>
+
+   <!--Library Demo related-->
+    <string name="trophy">Trophy icon</string>
+    <string name="you_have_not_won">You haven\'t won</string>
+    <string name="rupee_10">₹10</string>
+    <string name="scratch_effect">Scratch effect</string>
+    <string name="scratch_brush_size">Scratch brush size</string>
+    <string name="reveal_full_layout_at">Reveal full layout at %</string>
+    <string name="logs">Logs</string>
+    <string name="reset">Reset</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+</resources>
