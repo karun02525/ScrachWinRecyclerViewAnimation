@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.winds.scratchandwin.model.ModelScratch
 import kotlinx.android.synthetic.main.activity_main.*
@@ -70,7 +71,11 @@ class MainActivity : AppCompatActivity() {
             fun bind(item: ModelScratch) = with(this.itemView) {
                 ivScratch.setImageResource(item.coverURL)
                 cardBtn.setOnClickListener {
-                    startActivity(Intent(context,WinScreenActivity::class.java))
+                    val intent = Intent(context, WinScreenActivity::class.java)
+                    intent.putExtra("title", item.mess)
+                    val options = ActivityOptionsCompat.makeSceneTransitionAnimation(context as AppCompatActivity, this.ivScratch, "photoToAnimate")
+                    startActivity(intent, options.toBundle())
+
                 }
                 /* postId.text = item.firstName
                  postTitle.text = item.mobile
